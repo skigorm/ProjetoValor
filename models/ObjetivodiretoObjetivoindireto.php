@@ -13,7 +13,7 @@ use Yii;
  * @property Objetivo $fKObjetivoDir
  * @property Objetivo $fKObjetivoInd
  */
-class Objetivodi extends \yii\db\ActiveRecord
+class ObjetivodiretoObjetivoindireto extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}

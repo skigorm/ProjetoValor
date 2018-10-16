@@ -32,7 +32,7 @@ use app\models\Unidade;
       </div>
       <div class="col-md-4">
         <?= $form->field($model, 'FKUnidade')->dropdownList(
-          ArrayHelper::map(Unidade::find()->all(), 'FKUnidade','nomeUnidade'), [
+          ArrayHelper::map(Unidade::find()->all(), 'idunidade','nomeUnidade'), [
             'prompt' => 'Selecione a Unidade',]); ?>
 
           </div>

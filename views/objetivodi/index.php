@@ -25,8 +25,8 @@ $this->params['breadcrumbs'][] = "$this->title";
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'FKObjetivoDir',
-            'FKObjetivoInd',
+            'fKObjetivoDir.objetivo',
+            'fKObjetivoInd.objetivo',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
