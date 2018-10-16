@@ -43,7 +43,8 @@ AppAsset::register($this);
             // ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Unidade', 'url' => ['/unidade/index']],
             ['label' => 'Objetivo', 'url' => ['/objetivo/index']],
-            ['label' => 'Vincular', 'url' => ['/objetivo/vincular']],
+            ['label' => 'Vincular', 'url' => ['/objetivodi/index']],
+            // ['label' => 'Vincular', 'url' => ['/objetivo/vincular']],
             // ['label' => 'Tipo de Requisito', 'url' => ['/requisito/index']],
             // ['label' => 'Tipo de Objetivo', 'url' => ['/tipoObjetivo/index']],
             Yii::$app->user->isGuest ? (
