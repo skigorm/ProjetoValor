@@ -24,9 +24,20 @@ $this->params['breadcrumbs'][] = "$this->title";
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'fKObjetivoDir.objetivo',
-            'fKObjetivoInd.objetivo',
+            [
+              'label' => 'Objetivo que Entrega Valor',
+              'attribute' => 'fKObjetivoDir.objetivo',
+              'contentOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
+              'headerOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
+            ],
+            [
+              'label' => 'Objetivo que Recebe Valor',
+              'attribute' => 'fKObjetivoInd.objetivo',
+              'contentOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
+              'headerOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
+            ],
+            // 'fKObjetivoDir.objetivo',
+            // 'fKObjetivoInd.objetivo',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

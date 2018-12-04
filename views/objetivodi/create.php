@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Objetivodi */
 
-$this->title = 'Create Objetivodi';
-$this->params['breadcrumbs'][] = ['label' => 'Objetivodis', 'url' => ['index']];
+$this->title = 'Vincular Objetivos';
+$this->params['breadcrumbs'][] = ['label' => 'Vincular Objetivos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="objetivodi-create">

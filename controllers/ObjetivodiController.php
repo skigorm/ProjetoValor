@@ -44,6 +44,17 @@ class ObjetivodiController extends Controller
         ]);
     }
 
+    public function actionOrganograma()
+    {
+        $searchModel = new ObjetivodiSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('organograma', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
     /**
      * Displays a single Objetivodi model.
      * @param integer $FKObjetivoDir
@@ -67,8 +78,22 @@ class ObjetivodiController extends Controller
     {
         $model = new Objetivodi();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index', 'FKObjetivoDir' => $model->FKObjetivoDir, 'FKObjetivoInd' => $model->FKObjetivoInd]);
+        if ($model->load(Yii::$app->request->post())) {
+          $post = (Yii::$app->request->post()['Objetivodi']);
+          $dir = $post['FKObjetivoDir'];
+          $ind = $post['FKObjetivoInd'];
+
+          // var_dump($dir);
+          // var_dump($ind);die;
+
+          foreach ($ind as $value) {
+            $modelDir = new Objetivodi();
+            $modelDir->FKObjetivoDir = $dir;
+            $modelDir->FKObjetivoInd = $value;
+            $modelDir->save(false);
+          }
+
+          return $this->redirect(['index', 'FKObjetivoDir' => $model->FKObjetivoDir, 'FKObjetivoInd' => $model->FKObjetivoInd]);
         }
 
         return $this->render('create', [

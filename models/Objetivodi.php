@@ -45,6 +45,7 @@ class Objetivodi extends \yii\db\ActiveRecord
         return [
             'FKObjetivoDir' => 'Fkobjetivo Dir',
             'FKObjetivoInd' => 'Fkobjetivo Ind',
+
         ];
     }
 
@@ -63,4 +64,23 @@ class Objetivodi extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Objetivo::className(), ['idobjetivo' => 'FKObjetivoInd']);
     }
+
+    public function beforeSave($insert)
+    {
+      if (!empty($this->FKObjetivoInd)) {
+        $fks =  str_replace("'","",$this->FKObjetivoInd);
+        // $this->ArrFks = explode(",",$fks);
+
+        return parent::beforeSave($insert);
+
+      }
+    }
+
+      // public function relacionarObjetivos($FKObjetivoInd)
+      // {
+      //   var_dump($FKObjetivoInd);die;
+      //   foreach ($FKObjetivoInd as $key => $value) {
+      //     $chave = $value;
+      //   }
+      // }
 }

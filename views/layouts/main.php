@@ -44,6 +44,7 @@ AppAsset::register($this);
             ['label' => 'Unidade', 'url' => ['/unidade/index']],
             ['label' => 'Objetivo', 'url' => ['/objetivo/index']],
             ['label' => 'Vincular', 'url' => ['/objetivodi/index']],
+            ['label' => 'Organogramas', 'url' => ['/objetivodi/organograma']],
             // ['label' => 'Vincular', 'url' => ['/objetivo/vincular']],
             // ['label' => 'Tipo de Requisito', 'url' => ['/requisito/index']],
             // ['label' => 'Tipo de Objetivo', 'url' => ['/tipoObjetivo/index']],
