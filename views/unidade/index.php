@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
     [
       // 'atribute' => 'FKNivel',
       'value' => 'nivel.nivel',
+      'group' => true,
     ],
     // 'FKUnidade',
     // 'status',
