@@ -1,7 +1,8 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+// use yii\grid\GridView;
+use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ObjetivoSearch */
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Objetivo', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Criar Novo Objetivo', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -27,9 +28,18 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'idobjetivo',
             'objetivo',
-            'tipoObjetivo.tipoObjetivo',
-            'unidade.nomeUnidade',
-            'impacto.impacto',
+            [
+              // 'atribute' => 'FKNivel',
+              'value' => 'unidade.nomeUnidade',
+              'group' => true,
+              // 'subGroupOf' => 2,
+            ],
+            [
+              // 'atribute' => 'FKNivel',
+              'value' => 'tipoObjetivo.tipoObjetivo',
+              // 'group' => true,
+            ],
+            // 'impacto.impacto',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
