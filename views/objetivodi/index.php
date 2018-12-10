@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+// use yii\grid\GridView;
+use kartik\grid\GridView;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ObjetivodiSearch */
@@ -29,12 +31,16 @@ $this->params['breadcrumbs'][] = "$this->title";
               'attribute' => 'fKObjetivoDir.objetivo',
               'contentOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
               'headerOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
+              'group' => true,
+
             ],
+
             [
               'label' => 'Objetivo que Recebe Valor',
               'attribute' => 'fKObjetivoInd.objetivo',
               'contentOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
               'headerOptions' => ['class' => 'text-left', 'style' => 'vertical-align: middle'],
+              'group' => true,
             ],
             // 'fKObjetivoDir.objetivo',
             // 'fKObjetivoInd.objetivo',
